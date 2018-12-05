@@ -1,0 +1,381 @@
+@backgroundColor:#fff;    
+@borderColor: #ddd;
+@navBarColor: #f7f7f7;     
+@switchButtonColor: #49b4ab; 
+@shadowColor: rgba(94, 94, 94, 0.6);
+
+body{
+    box-sizing:border-box;
+    }
+
+.border(@color:@borderColor;@width:1px){ 
+    border:@width solid @color
+}
+.bottomBorderDashed(@color:@borderColor;@width:1px){
+    background-position: 0 bottom;
+    background-size: 4px @width;
+    background-repeat: repeat-x;
+    margin-bottom: -1px;
+    border-bottom-color: transparent;
+    color: @color;
+    background-image: linear-gradient(to right, @color 0%, @color 33%, transparent 0%);
+    background-image: -ms-linear-gradient(left, transparent 0%, @color 100%);
+}
+.bottomBorderSolid(@color:@borderColor;@width:1px){
+    border-bottom:@width solid @color
+}
+.tBorderS(@color:@borderColor;@width:1px){
+    border-top:@width solid @color
+}
+.topBorderSolid{
+    .tBorderS
+}
+
+input{
+    vertical-align: middle
+}
+textarea{
+    resize: none;
+}
+label{
+    margin-bottom: 0;
+}
+.form-group {
+    margin-bottom: 0; 
+}
+.wordnowrap{
+    white-space: nowrap;
+}
+.textUC{
+    text-transform:Uppercase
+}
+.flex{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.flexCenter{
+    justify-content: center
+}
+.flexStatr{
+    align-items: flex-start;
+}
+.flexEnd{
+    align-items: flex-end!important;
+}
+.flexWrap{
+    flex-wrap: wrap;
+}
+.flexAround{
+    justify-content: space-around
+}
+.flexBetween{
+    justify-content: space-between
+}
+.flexGrow{
+    flex-grow: 1
+}
+.flexShrink{
+    flex-shrink: 0
+}   
+.inlineBlock{
+    display:inline-block;
+} 
+.fz(@n:20px){
+    font-size: @n
+}
+.f20{
+    .fz
+}
+.f18{
+    .fz(@n:18px)
+}
+.f16{
+    .fz(@n:16px)
+}
+.f14{
+    .fz(@n:14px)
+}
+.f12{
+    .fz(@n:12px)
+}
+.f10{
+    .fz(@n:10px)
+}
+.blod{
+    font-weight: 600
+} 
+.p-l-20{
+    padding-left: 20px
+}  
+.p-t-20{
+    padding-top: 20px
+}
+.p-r-20{
+    padding-right:20px
+}
+.p-b-20{
+    padding-bottom:20px
+}
+.p-b-10{
+    padding-bottom:10px
+}
+.m-b-20{
+    margin-bottom: 20px
+}
+.m-b-40{
+    margin-bottom: 40px
+}
+.m-r-15{
+    margin-right: 15px
+}
+.no-mp{
+    margin: 0;
+    padding: 0
+}
+.paddingright{
+    padding-right: 10px
+}
+.padding-b-20 {
+    padding-bottom:20px
+}
+.padding {
+    padding:20px
+}
+.padding_10 {
+    padding:10px
+}
+.pointer{
+    cursor: pointer;
+}
+.icon{
+    display:inline-block;
+    color: @switchButtonColor;
+    font-size:24px;
+    width:24px;
+    height:24px
+}
+.hasshadow(@c:@shadowColor) {
+    -webkit-box-shadow: 5px 1px 20px -6px @c;
+    -moz-box-shadow: 5px 1px 20px -6px @c;
+    box-shadow: 5px 1px 20px -6px @c;
+}
+.hasshadow{
+    .hasshadow
+}
+.coupons-right_block >span, .maximum-right_block>span{
+    font-size:.9em;
+    display:block;
+    margin:16px
+}
+.coupons-right_block >span>small, .maximum-right_block>span>small{
+    font-size:10px;
+    font-weight:700;
+    line-height:12px;
+    display:inline-block;
+    text-transform: uppercase;
+} 
+
+.ischeckRow{
+    background: #e7e5f7!important;
+}
+.close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+label{
+    font-weight: 500
+}
+/*event history 部分 start*/
+
+.events-list {
+    font-size: 13px;
+    margin-left: 27px;
+    border-left: 2px #424242 solid;
+    margin-bottom: 20px;
+}
+.events-list_item{
+    padding: 5px;
+    margin-left: -21px;
+}
+.events-list_item_icon{
+    color: #424242;
+    margin-right: 15px;
+    border: 2px #424242 solid;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 6px;
+}
+.events-list_item_icon .icon{
+    color: #424242 ;
+    font-size:17px;
+    width:17px;
+    height:17px;
+    top: -1px;
+    left: -2px;
+}
+/*event history部分 end*/
+  
+/* switch Button                   begin *************************************/		
+.md-switch {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    // margin: 15px 0;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.md-switch .md-container {
+    cursor: -webkit-grab;
+    cursor: grab;
+    width: 36px;
+    height: 24px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 8px;
+}
+.md-switch.md-checked .md-bar {
+    background-color: fade(@switchButtonColor,50%);
+}
+.md-switch:not(.md-dragging) .md-thumb-container {
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: -webkit-transform,background-color;
+    transition-property: transform,background-color;
+}
+
+.md-switch.md-checked .md-thumb-container {
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+.md-switch .md-thumb-container {
+    top: 2px;
+    left: 0;
+    width: 16px;
+    position: absolute;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 1;
+}
+.md-switch .md-thumb {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    outline: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.14), 0 2px 2px 0 rgba(0,0,0,.098), 0 1px 5px 0 rgba(0,0,0,.084);
+}
+.md-switch .md-thumb .md-ripple-container {
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    left: -20px;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+}
+.md-ripple-container {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .55s cubic-bezier(.25,.8,.25,1);
+}
+.md-switch.md-checked .md-thumb {
+    background-color: @switchButtonColor;
+}
+.md-switch:not(.md-dragging) .md-bar, .md-switch:not(.md-dragging) .md-thumb {
+    transition-delay: .05s;
+}
+.md-switch:not(.md-dragging) .md-bar, .md-switch:not(.md-dragging) .md-thumb, .md-switch:not(.md-dragging) .md-thumb-container {
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: -webkit-transform,background-color;
+    transition-property: transform,background-color;
+}
+.md-switch .md-bar {
+    left: 1px;
+    width: 34px;
+    top: 5px;
+    height: 14px;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.md-switch .md-bar {
+    background-color: rgb(158,158,158);
+}
+.md-switch:not(.md-dragging) .md-bar, .md-switch:not(.md-dragging) .md-thumb {
+    transition-delay: .05s;
+}
+.md-switch:not(.md-dragging) .md-bar, .md-switch:not(.md-dragging) .md-thumb, .md-switch:not(.md-dragging) .md-thumb-container {
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: -webkit-transform,background-color;
+    transition-property: transform,background-color;
+}
+
+.md-switch .md-thumb {
+    background-color: rgb(250,250,250);
+}
+/*html*/
+/*<div :class="['md-switch',{'md-checked':v.active}]" @click="couponsActiveChange(couponsList,k)">
+    <div class="md-container">
+        <div class="md-bar"></div>
+        <div class="md-thumb-container">
+            <div class="md-thumb" md-ink-ripple="" md-ink-ripple-checkbox=""></div>
+        </div>
+    </div>
+</div>*/
+
+/* switch Button                   end *************************************/		
+
+// admintel 
+body:not(.sidebar-collapse){
+    @media (min-width: 768px){
+        .container {
+            width: 490px;
+        }
+    }
+    @media (min-width: 992px){
+        .container {
+            width: 700px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container {
+            width: 910px;
+        }
+    }
+    @media (min-width: 1430px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
